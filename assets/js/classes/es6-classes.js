@@ -1,4 +1,4 @@
-class Persona {
+export class Persona {
   static _cantidadInstancias = 0;
   static get cantidadInstancias() {
     return Persona._cantidadInstancias;
@@ -41,24 +41,26 @@ class Persona {
   }
 }
 
-const spiderman = new Persona(
-  "Peter Parker",
-  "Spider-man",
-  "Soy tu amigable vecino Spider-man."
-);
-
-spiderman.quienSoy();
-
-spiderman.miFrase();
-
-spiderman.setComida = "Pizza";
-
-console.log("🚀 ~ spiderman.getComida:", spiderman.getComida);
-
-console.log("🚀 ~ spiderMan:", spiderman);
-
-console.log("- - - - - - - - - - - -");
-
-console.log("🚀 ~ Persona.cantidadInstancias:", Persona.cantidadInstancias);
-
-Persona.mensaje();
+/*
+ *  const spiderman = new Persona(
+ *    "Peter Parker",
+ *    "Spider-man",
+ *    "Soy tu amigable vecino Spider-man."
+ *  );
+ *
+ *  spiderman.quienSoy();
+ *
+ *  spiderman.miFrase();
+ *
+ *  spiderman.setComida = "Pizza";
+ *
+ *  console.log("🚀 ~ spiderman.getComida:", spiderman.getComida);
+ *
+ *  console.log("🚀 ~ spiderMan:", spiderman);
+ *
+ *  console.log("- - - - - - - - - - - -");
+ *
+ *  console.log("🚀 ~ Persona.cantidadInstancias:", Persona.cantidadInstancias);
+ *
+ *  Persona.mensaje();
+ */
