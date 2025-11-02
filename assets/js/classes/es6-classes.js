@@ -7,10 +7,7 @@ export class Persona {
     console.log("Soy un método estático.");
   }
 
-  nombre = "";
-  codigo = "";
-  frase = "";
-  comida = "";
+  _comida = "";
 
   constructor(
     nombre = "Sin nombre.",
@@ -24,12 +21,12 @@ export class Persona {
     Persona._cantidadInstancias++;
   }
 
-  set setComida(comida) {
-    this.comida = comida.toLowerCase();
+  set comida(value) {
+    this._comida = value.toLowerCase();
   }
 
-  get getComida() {
-    return `La comida favorita de ${this.codigo} es: ${this.comida}.`;
+  get comida() {
+    return `La comida favorita de ${this.codigo} es: ${this._comida}.`;
   }
 
   quienSoy() {
@@ -52,9 +49,9 @@ export class Persona {
  *
  *  spiderman.miFrase();
  *
- *  spiderman.setComida = "Pizza";
+ *  spiderman.comida = "Pizza";
  *
- *  console.log("🚀 ~ spiderman.getComida:", spiderman.getComida);
+ *  console.log("🚀 ~ spiderman.comida:", spiderman.comida);
  *
  *  console.log("🚀 ~ spiderMan:", spiderman);
  *
